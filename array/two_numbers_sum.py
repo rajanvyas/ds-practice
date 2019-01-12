@@ -90,8 +90,8 @@ class Solution:
                 k = k + 1
 
     def main(self):
-        A = [-8, 1, 4, 6, 10, 45]
-        print(self.findElement(A,55))
+        A = [ 1, 4, 6, 10, 45]
+        print(self.findElement(A,14))
 
 if __name__ == '__main__':
     sol = Solution()

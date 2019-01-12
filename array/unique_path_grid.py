@@ -57,15 +57,8 @@ class Solution:
         print "\n"
 
 
-    def findObstacle(self,elem):
-        if elem is 1:
-            return True
-        else :
-            return False
-
-
     def main(self):
-        A = [[0,0,0],[0,1,0],[0,0,0]]
+        A = [[0,0,1,0],[0,0,0,1],[1,0,0,0],[1,1,0,0]]
         print(self.uniquePathsWithObstacles(A))
 
 if __name__ == '__main__':
