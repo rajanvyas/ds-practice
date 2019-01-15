@@ -29,6 +29,7 @@ class Solution(object):
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
             target = nums[i] * -1
+            print target
             s, e = i + 1, N - 1
             while s < e:
                 if nums[s] + nums[e] == target:
