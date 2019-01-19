@@ -24,36 +24,27 @@
 #              is 5 but its right child's value is 4.
 
 class Solution(object):
-    def isValidBST(self, root):
-        """
-        :type root: TreeNode
-        :rtype: bool
-        """
-        if root is None:
-            return True
-        min, max = self.getLimit(root)
-        if min is None:
-            return False
-        return True
+    class Solution(object):
+        def isValidBST(self, root):
+            """
+            :type root: TreeNode
+            :rtype: bool
+            """
+            prev = [None]
 
-    def getLimit(self, node):
-        invalid = (None, None)
-        if node is None:
-            return invalid
-        min, max = (node.data, node.data)
-        if node.left is not None:
-            t = self.getLimit(node.left)
-            if t[1] is None or t[1] >= node.data:
-                return invalid
-            else:
-                min = t[0]
-        if node.right is not None:
-            t_min, t = self.getLimit(node.right)
-            if t_min is None or t_min <= node.data:
-                return invalid
-            else:
-                max = t
-        return min, max
+            return self.helper(root, prev)
+
+        def helper(self, root, prev):
+            if root == None:
+                return True
+            if not self.helper(root.left, prev):
+                return False
+            if prev[0] >= root.val:
+                return False
+
+            prev[0] = root.val
+
+            return self.helper(root.right, prev)
 
 
     def main(self):

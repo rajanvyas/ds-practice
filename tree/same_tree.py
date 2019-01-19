@@ -57,7 +57,7 @@ class Solution(object):
             return False
 
     def main(self):
-        p=[1,2,3,4,5]
+        p=[5,1,4,None,None,3,6]
         root_p = None
         root_q = None
         for i in range(len(p)):
@@ -74,7 +74,7 @@ class Solution(object):
                 root_q.insert(q[i])
         #root_p.print_tree()
         #root_q.print_tree()
-        print self.isSameTree(root_p,root_q)
+        print self.isValidBST(root_p)
 
 class BinarySerchTree:
     def __init__(self,data):
