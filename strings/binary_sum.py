@@ -38,14 +38,9 @@ class Solution(object):
                 r+=1
             result = ('1' if r%2==1 else '0')+result
             carry = 0 if r<2 else 1
-
         if carry != 0:
             result = '1'+result
         return result
-
-
-
-
 
 
     def main(self):
